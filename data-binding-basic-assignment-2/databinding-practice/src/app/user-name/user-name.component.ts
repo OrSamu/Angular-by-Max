@@ -19,4 +19,12 @@ export class UserNameComponent implements OnInit {
     this.usernameEmpty = true;
   }
 
+  onUserNameChange(event){
+    if(this.username === '')
+    {
+      this.onResetUsername();
+      return;
+    }
+    this.usernameEmpty = false;
+  }
 }
