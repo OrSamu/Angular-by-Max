@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'recipes-shoppinglist-project';
+  showRecipesComponent: boolean = true;
+
+  onNavChange(event){
+    if (event === "Recipes"){
+      this.showRecipesComponent = true;
+      return;
+    }
+    this.showRecipesComponent = false;
+  }
 }
